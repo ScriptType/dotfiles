@@ -30,3 +30,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Forgit
 export FORGIT_INSTALL_DIR="$HOME/.local/share/forgit"
+
+# n (node version manager)
+export N_PREFIX="$HOME/.n"
+export PATH="$N_PREFIX/bin:$PATH"

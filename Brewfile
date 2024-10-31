@@ -22,6 +22,7 @@ brew "jq"             # JSON processor for command line
 brew "yq"             # YAML processor (like jq but for YAML)
 brew "difftastic"     # Syntax-aware diff tool
 brew "bind"           # Contains dig command for DNS lookups
+brew "n"              # Node version manager
 
 # System monitoring and process management
 brew "htop"           # Interactive process viewer

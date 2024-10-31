@@ -1,5 +1,7 @@
-# Export forgit install directory (must be before plugins)
-export FORGIT_INSTALL_DIR="$HOME/.local/share/forgit"
+# Install LTS version if no Node.js version is installed
+if ! command -v node >/dev/null 2>&1; then
+    n lts
+fi
 
 # Initialize completion system
 autoload -Uz compinit
