@@ -2,3 +2,5 @@
 --theme="Catppuccin-mocha"         # Modern, eye-friendly theme
 --color=always                      # Always show colors
 --paging=always                     # Always use pager
+--map-syntax "*.conf:INI"          # Treat .conf files as INI
+--map-syntax ".gitignore:Git Ignore"

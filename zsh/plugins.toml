@@ -2,59 +2,46 @@ shell = "zsh"
 
 [plugins]
 
-# Fast syntax highlighting - chosen over zsh-syntax-highlighting because:
-# - Faster performance
-# - More features like multiple themes
-# - Better customization
+# Fast syntax highlighting
+# - Faster than traditional zsh-syntax-highlighting
+# - Better syntax recognition
+# - Multiple themes
+# - Regexp-based highlighting
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
-# Autosuggestions - essential for productivity
-# Shows suggestions based on history as you type
+# Fish-like autosuggestions
+# - Shows command suggestions as you type
+# - Uses history and completions
+# - Can be accepted with right arrow
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-# Modern tab completion using fzf
-# - Much more powerful than default completion
-# - Visual selection
-# - Preview window for files
+# Enhanced tab completion with fzf
+# - Replaces default completion with fzf interface
+# - Shows previews for files/commands
+# - Group support for better organization
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 
-# Forgit - modern git operations with previews
-# - Interactive git add/reset
-# - Visual git log
-# - Interactive git blame
+# Modern git operations with fzf
+# Usage:
+# - ga: interactive git add with preview
+# - glo: interactive git log
+# - gi: interactive .gitignore generator
+# - gd: interactive git diff
 [plugins.forgit]
 github = "wfxr/forgit"
 
 # Better history search with fzf
-# - Visual search through history
-# - Preview window
-# - Fuzzy matching
+# - More powerful than CTRL-R
+# - Shows preview of full commands
+# - Fuzzy search through history
 [plugins.fzf-history-search]
 github = "joshskidmore/zsh-fzf-history-search"
 
-# Additional useful aliases
-[plugins.zsh-aliases]
-inline = """
-# Quick directory navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-# Git shortcuts
-alias g='git'
-alias gs='git status'
-alias gp='git push'
-
-# Common operations
-alias mkdir='mkdir -p'
-alias rm='rm -i'  # Safe remove
-alias cp='cp -i'  # Safe copy
-alias mv='mv -i'  # Safe move
-
-# Quick edits
-alias zshrc='$EDITOR ~/.zshrc'
-alias reload='source ~/.zshrc'
-"""
+# Additional completions
+# - Adds thousands of completions
+# - Works with fzf-tab
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"

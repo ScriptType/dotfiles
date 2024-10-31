@@ -1,0 +1,53 @@
+[user]
+    # These are examples, user should set their own
+    # name = Your Name
+    # email = your.email@example.com
+
+[core]
+    editor = code-insiders --wait
+    pager = delta
+    excludesfile = ~/.gitignore_global
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal with a light background color
+    side-by-side = true
+    line-numbers = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[alias]
+    # Basic shortcuts
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    
+    # Advanced aliases
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk
+    uncommit = reset --soft HEAD^
+    amend = commit --amend --no-edit
+    
+    # Branch management
+    gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+    cleanup = ! "git branch --merged | grep -v '\\*\\|master\\|main\\|develop' | xargs -n 1 git branch -d"

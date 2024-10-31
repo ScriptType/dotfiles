@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Zsh generated files
+*.zwc
+*.zwc.old
+.zcompdump*
+.zsh_history
+.zsh_sessions
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local configuration files
+*.local
+.zshrc.local
+.zshenv.local
+
+# Homebrew bundle
+Brewfile.lock.json
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Cache directories
+.cache/
