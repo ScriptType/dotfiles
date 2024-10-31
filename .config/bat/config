@@ -1,0 +1,4 @@
+--style="numbers,changes,header"    # Show line numbers, Git changes, and file headers
+--theme="Catppuccin-mocha"         # Modern, eye-friendly theme
+--color=always                      # Always show colors
+--paging=always                     # Always use pager

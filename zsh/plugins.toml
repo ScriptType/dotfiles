@@ -1,0 +1,60 @@
+shell = "zsh"
+
+[plugins]
+
+# Fast syntax highlighting - chosen over zsh-syntax-highlighting because:
+# - Faster performance
+# - More features like multiple themes
+# - Better customization
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+# Autosuggestions - essential for productivity
+# Shows suggestions based on history as you type
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# Modern tab completion using fzf
+# - Much more powerful than default completion
+# - Visual selection
+# - Preview window for files
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+# Forgit - modern git operations with previews
+# - Interactive git add/reset
+# - Visual git log
+# - Interactive git blame
+[plugins.forgit]
+github = "wfxr/forgit"
+
+# Better history search with fzf
+# - Visual search through history
+# - Preview window
+# - Fuzzy matching
+[plugins.fzf-history-search]
+github = "joshskidmore/zsh-fzf-history-search"
+
+# Additional useful aliases
+[plugins.zsh-aliases]
+inline = """
+# Quick directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Git shortcuts
+alias g='git'
+alias gs='git status'
+alias gp='git push'
+
+# Common operations
+alias mkdir='mkdir -p'
+alias rm='rm -i'  # Safe remove
+alias cp='cp -i'  # Safe copy
+alias mv='mv -i'  # Safe move
+
+# Quick edits
+alias zshrc='$EDITOR ~/.zshrc'
+alias reload='source ~/.zshrc'
+"""
