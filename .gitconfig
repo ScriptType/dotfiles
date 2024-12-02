@@ -1,4 +1,6 @@
 [user]
+	name = Philipp Aleksovski
+	email = philipp.black@hotmail.de
     # These are examples, user should set their own
     # name = Your Name
     # email = your.email@example.com
@@ -51,3 +53,5 @@
     # Branch management
     gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
     cleanup = ! "git branch --merged | grep -v '\\*\\|master\\|main\\|develop' | xargs -n 1 git branch -d"
+[credential]
+	helper = manager

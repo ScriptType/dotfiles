@@ -23,7 +23,9 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Path
-export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
+export PATH="/Users/aleksovski/.local/share/mise/shims:$PATH"
+
 
 # Man pages
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -31,6 +33,9 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Forgit
 export FORGIT_INSTALL_DIR="$HOME/.local/share/forgit"
 
-# n (node version manager)
-export N_PREFIX="$HOME/.n"
-export PATH="$N_PREFIX/bin:$PATH"
+export NODE_OPTIONS="--max-old-space-size=8192"
+
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"

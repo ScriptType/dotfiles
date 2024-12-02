@@ -5,9 +5,11 @@ alias c.='code-insiders .'  # Open current directory
 alias cdot='code-insiders ~/dotfiles'  # Quick access to dotfiles
 
 # Modern CLI tool aliases
-alias cat='bat'  # Modern cat replacement
-alias find='fd'  # Modern find replacement
-alias grep='rg'  # Modern grep replacement
+alias cat='bat'     # Modern cat replacement
+alias find='fd'     # Modern find replacement
+alias grep='rg'     # Modern grep replacement
+alias count='scc'   # Count lines of code
+
 
 # Modern ls aliases
 alias ls='eza --icons --group-directories-first'
@@ -39,8 +41,10 @@ alias usage='btm'           # Better top with graphs
 alias top='btm'             # Replace top with bottom
 
 # Network tools
-alias ping='gping'          # Ping with graph
+alias ping='gping -4'       # Ping with graph
+alias ping6='gping -6'      # Ping with graph
 alias dns='dig +short'      # DNS lookup with short output
+alias dns6='dig +short -6'  # DNS lookup with short output
 
 # JSON/YAML processing
 alias yaml='yq'             # YAML processor
@@ -82,6 +86,17 @@ alias fb='fzf-git-branch'
 alias fk='fzf-kill'
 alias fm='fzf-man'
 alias fh='fzf-tldr'  # help pages
+
+#global npm aliases
+alias ng='npx @angular/cli'
+
+# Metal HUD toggle
+alias mhud='toggle_metal_hud'  # Toggle Metal HUD on/off
+
+# #weird mise hack aliases (bug in warp)
+# alias node='node'
+# alias go='go'
+# alias rusts='rustc'
 
 # Fallback for when eza is not available
 if ! command -v eza &> /dev/null; then

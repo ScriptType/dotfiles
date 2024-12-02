@@ -1,0 +1,5 @@
+[tools]
+node = "latest"
+go = "latest"
+rust = "latest"
+flutter = "latest"

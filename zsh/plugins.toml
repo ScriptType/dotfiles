@@ -45,3 +45,8 @@ github = "joshskidmore/zsh-fzf-history-search"
 # - Works with fzf-tab
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
+
+
+[plugins.homebrew-completions]
+inline = 'fpath=(/opt/homebrew/share/zsh/site-functions $fpath)'
+

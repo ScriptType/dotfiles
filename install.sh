@@ -12,6 +12,7 @@ mkdir -p ~/.config/starship
 # Ensure dotfiles directories exist
 mkdir -p .config/bat
 mkdir -p .config/starship
+mkdir -p ~/.config/mise
 
 # Create symlinks
 echo "Creating symlinks..."
@@ -23,6 +24,7 @@ ln -sf "$PWD/zsh/aliases.zsh" ~/.config/zsh/aliases.zsh
 ln -sf "$PWD/.config/starship.toml" ~/.config/starship.toml
 ln -sf "$PWD/.gitconfig" ~/.gitconfig
 ln -sf "$PWD/.gitignore_global" ~/.gitignore_global
+ln -s ~/dotfiles/.config/mise/config.toml ~/.config/mise/config.toml
 
 # Install Homebrew if not installed
 if ! command -v brew &> /dev/null; then
